@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>MAIN PAGE</title>
-</head>
-<body>
-    <nav id="navBar">
-    </nav>
-    <div id="sideBar"></div>
-    <div id="footer">
-        teste
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>MAIN PAGE</title>
+    </head>
+    <body>
+        <div id="sideBar">
+            <div id="linha" onclick="navBarClose()">
+                <label for="">&times;</label> 
+                <label for="">CLOSE</label>
+            </div>
+            <div id="gridSide">
+                <a href="" class="elementSide">Link 1</a>
+                <a href="" class="elementSide">Link 2</a>
+                <a href="" class="elementSide">Link 3</a>
+            </div>
+        </div>
+        <nav id="navBar">
+            <button onclick="navBarOpen()" id="buttonOpen" class="buttonHide">&#9776;</button>
+            <h4 class="textNav">TESTE</h4>
+            <div id="optionsNav">
+                <a href="" class="elementGrid">Link 1 a</a>
+                <a href="" class="elementGrid">Link 2</a>
+                <a href="" class="elementGrid">Link 3</a>
+            </div>
+
+
+        </nav>
+        <div id="content">
+            asdasd
+        </div>
+    </body>
 </html>
