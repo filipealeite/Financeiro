@@ -3,35 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="script/script.js"></script>
         <title>MAIN PAGE</title>
     </head>
     <body>
-        <div id="sideBar">
+        <section id="sideBar">
             <div id="linha" onclick="navBarClose()">
                 <label for="">&times;</label> 
                 <label for="">CLOSE</label>
             </div>
             <div id="gridSide">
-                <a href="" class="elementSide">Link 1</a>
+                <a href="index.html" class="elementSide" id="home">Home</a>
+                <a href="html/cadastroContas.html" class="elementSide">Cadastro de contas</a>
                 <a href="" class="elementSide">Link 2</a>
                 <a href="" class="elementSide">Link 3</a>
             </div>
-        </div>
+        </section>
         <nav id="navBar">
-            <button onclick="navBarOpen()" id="buttonOpen" class="buttonHide">&#9776;</button>
-            <h4 class="textNav">TESTE</h4>
+            <div onclick="navBarOpen()"  id="buttonOpen"  class="buttonHide">
+                <label for="">&#9776;</label> 
+                <label for="">EXPANDIR</label> 
+            </div>
             <div id="optionsNav">
-                <a href="" class="elementGrid">Link 1 a</a>
+                <a href="" class="elementGrid">Link 1</a>
                 <a href="" class="elementGrid">Link 2</a>
                 <a href="" class="elementGrid">Link 3</a>
             </div>
-
-
         </nav>
-        <div id="content">
-            asdasd
-        </div>
+        <section id="content">
+
+            <div id="cards">
+                <div class="elementDash">a</div>
+                <div class="elementDash">a</div>
+                <div class="elementDash">a</div>
+                <div class="elementDash">a</div>
+            </div>
+
+            <div id="graph">
+                <div class="elementGraph">b</div>
+                <div class="elementGraph">b</div>
+                <div class="elementGraph">b</div>
+                <div class="elementGraph">b</div>
+            </div>
+
+
+        </section>
     </body>
 </html>

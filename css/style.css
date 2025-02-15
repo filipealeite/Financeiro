@@ -12,7 +12,7 @@ body{
     background-color: rgb(197, 192, 192);
     width: 100%;
     height: 35px;
-    padding: 0px 15px;
+
     transition: margin-left 0.3s ease-in-out; 
 }
 #sideBar{
@@ -51,7 +51,6 @@ body{
 }
 
 #content{
-    display: flex;
     margin-top: 50px;
     margin-left: 250px;
     padding: 0 15px;
@@ -82,6 +81,7 @@ body{
     align-items: center;
     height: 35px;
     transition: 0.3s;
+    box-shadow: 1px 0px 3px rgb(177, 176, 176);
 }
 
 #linha:hover{
@@ -97,11 +97,9 @@ body{
 
     margin-left: 10px;
 }
-.textNav{
-    margin-left: 15px;
-}
+
 #optionsNav{
-    margin-left: 60px;
+    margin-left: 0px;
     display: grid;
     grid-template-columns: 100px 100px 100px 100px;
 
@@ -121,4 +119,59 @@ body{
     background-color: rgb(175, 110, 235);
     color: white;
     font: bold;
+}
+
+#buttonOpen{
+    display: none;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+}
+#buttonOpen label{
+    padding-left: 15px;
+}
+#buttonOpen:hover{
+    background-color: aqua;
+    transition: 0.3s;
+}
+
+#cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 100px
+}
+
+.elementDash{
+    text-decoration: none;
+    color: black;
+    background-color: red;
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgb(177, 176, 176);
+}
+
+#home{
+    background-color: rgb(223, 223, 223);
+}
+#home:hover{
+    background-color: rgb(175, 110, 235);
+    color: white;
+}
+#graph{
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 550px); /* 2 colunas por linha */
+    justify-content:space-evenly;
+    gap: 35px;
+    width: 100%;
+}
+.elementGraph{
+    background-color: aqua;
+    width: 550px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgb(177, 176, 176);
 }

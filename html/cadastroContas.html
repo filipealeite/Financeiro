@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/styleCadastroContas.css">
+        <script src="../script/script.js"></script>
+        <title>CADASTRO DE CONTAS</title>
+    </head>
+    <body>
+        <section id="sideBar">
+            <div id="linha" onclick="navBarClose()">
+                <label for="">&times;</label> 
+                <label for="">CLOSE</label>
+            </div>
+            <div id="gridSide">
+                <a href="../index.html" class="elementSide">Home</a>
+                <a href="cadastroContas.html" class="elementSide" id="cadastroContas">Cadastro de contas</a>
+                <a href="" class="elementSide">Link 2</a>
+                <a href="" class="elementSide">Link 3</a>
+            </div>
+        </section>
+        <nav id="navBar">
+            <div onclick="navBarOpen()"  id="buttonOpen"  class="buttonHide">
+                <label for="">&#9776;</label> 
+                <label for="">EXPANDIR</label> 
+            </div>
+
+            <div id="optionsNav">
+                <a href="" class="elementGrid">Link 1</a>
+                <a href="" class="elementGrid">Link 2</a>
+                <a href="" class="elementGrid">Link 3</a>
+            </div>
+        </nav>
+        <section id="content">
+            <button data-open-modal>Tesste</button>
+            <dialog data-model>
+                <form action="" id="formConta">
+                    <label for="">Nome:</label>
+                    <input type="text" name="" id="">
+                    <label for="">Tipo:</label>
+                    <select name="" id="">
+                        <option value="teste">teste</option>
+                        <option value="teste2">teste2</option>
+                        <option value="teste3">teste3</option>
+                    </select>
+                    <label for="">Valor conta:</label>
+                    <input type="text" name="" id="">
+                </form>
+            </dialog>
+        </section>
+    </body>
+</html>
