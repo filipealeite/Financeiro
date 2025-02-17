@@ -23,18 +23,16 @@ function navBarClose(){
     },300);
     
 }
-const modal = document.querySelector("[data-model]");
-const openButton = document.querySelector("[data-open-modal]");
-const cleseButton = document.querySelector("[data-close-modal]");
-openButton.addEventListener("click",()=>{
-    modal.showModal();
-});
 
-
-function exibirCadastro(){
-
-    
-
+function exibirCadastro() {
+    let modal = document.getElementById("modal");
+    modal.style.display = "block";
 }
 
+window.onclick = function(event) {
+    let modal = document.getElementById("modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
 
