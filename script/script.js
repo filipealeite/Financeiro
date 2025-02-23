@@ -26,13 +26,40 @@ function navBarClose(){
 
 function exibirCadastro() {
     let modal = document.getElementById("modal");
-    modal.style.display = "block";
+    modal.style.display = "flex";
 }
 
 window.onclick = function(event) {
     let modal = document.getElementById("modal");
     if (event.target === modal) {
         modal.style.display = "none";
+        document.getElementById("txtNome").value = ""
+        document.getElementById("txtValorConta").value = ""
     }
 };
+
+function getItens(){
+    fetch('https://localhost:7103/api/accounts')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error("Error",error))
+}
+
+function postContas(){
+    let _descricao = document.getElementById("txtNome").value;
+    let _valor = document.getElementById("txtValorConta").value;
+
+    fetch('https://localhost:7103/api/accounts',{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            descricao: _descricao,
+            valor: _valor
+        })
+    })
+    .then((response) => response.json())
+    .then(json=>console.log(json))
+}
 
