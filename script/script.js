@@ -35,31 +35,72 @@ window.onclick = function(event) {
         modal.style.display = "none";
         document.getElementById("txtNome").value = ""
         document.getElementById("txtValorConta").value = ""
+        const node = document.getElementById("main-contas")
+        while(node.firstChild){
+            node.removeChild(node.lastChild)
+        }
+        getItens()
     }
 };
 
-function getItens(){
-    fetch('https://localhost:7103/api/accounts')
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error("Error",error))
-}
-
-function postContas(){
-    let _descricao = document.getElementById("txtNome").value;
-    let _valor = document.getElementById("txtValorConta").value;
-
-    fetch('https://localhost:7103/api/accounts',{
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            descricao: _descricao,
-            valor: _valor
+async function getItens(){
+    try{
+        const response = await fetch('https://localhost:7103/api/accounts',{
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
         })
-    })
-    .then((response) => response.json())
-    .then(json=>console.log(json))
+        const list = await response.json()
+        
+        if(list.length > 0){
+            list.forEach(element => {
+                var div = document.createElement("div")
+                document.getElementById("main-contas").appendChild(div)
+                
+                var labelId = document.createElement("label")
+                var labelDescricao = document.createElement("label")
+                var labelValor = document.createElement("label")
+                
+                div.appendChild(labelId)
+                div.appendChild(labelDescricao)
+                div.appendChild(labelValor)
+
+                labelId.innerHTML = `Id: ${element.id}`
+                labelDescricao.innerHTML = `Descricao: ${element.descricao}`
+                labelValor.innerHTML = `Valor: ${element.valor}`
+                
+                div.classList.add("conta")
+            });
+            console.log("work it")
+        }
+    }catch(error){
+        console.log(error)
+    }
 }
 
+async function postContas(){
+    try{
+        let _descricao = document.getElementById("txtNome").value;
+        let _valor = document.getElementById("txtValorConta").value;
+
+        const response = await fetch('https://localhost:7103/api/accounts',{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                descricao: _descricao,
+                valor: _valor
+            })
+        })
+        await response.json
+        if(response.ok){
+           alert("Cadastro realizado")
+        }else{
+            alert("Erro ao cadastrar ou limite excedito")
+        }
+    }catch(error){
+        console.log(error)
+    }
+}

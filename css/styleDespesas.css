@@ -1,0 +1,21 @@
+#main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#gridDespesas{
+    display: grid;
+    margin-top:100px;
+    width: 945px;
+    height: 350px;
+    grid-template-columns: repeat(10,90px);
+    grid-template-rows: repeat(10,25px);
+    background-color: aqua;
+    column-gap: 5px;
+    
+}
+
+.linhas{
+    background-color: red;
+
+}
