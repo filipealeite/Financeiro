@@ -4,6 +4,7 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+    
 }
 #navBar{
     position: fixed;
@@ -47,8 +48,15 @@ body{
 }
 
 .elementSide:hover{
-    background-color: aqua;
+    margin-left: 5px;
+    border-radius: 8px;
+    background-color: rgb(213, 214, 214);
     transition: 0.3s;
+    margin-right: 5px;
+}
+
+.elementSide label{
+    margin-left: 15px;
 }
 
 #content{
@@ -98,7 +106,7 @@ body{
 #optionsNav{
     margin-left: 0px;
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-columns: repeat(5,120px);
 
 }
 
@@ -113,7 +121,7 @@ body{
 }
 
 .elementGrid:hover{
-    background-color: rgb(175, 110, 235);
+    background-color: rgb(0, 0, 0);
     color: white;
     font: bold;
 }
@@ -150,13 +158,7 @@ body{
     box-shadow: 2px 2px 4px rgb(177, 176, 176);
 }
 
-#home{
-    background-color: rgb(223, 223, 223);
-}
-#home:hover{
-    background-color: rgb(175, 110, 235);
-    color: white;
-}
+
 #graph{
     margin-top: 150px;
     display: grid;

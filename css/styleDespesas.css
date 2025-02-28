@@ -4,18 +4,27 @@
     width: 100%;
 }
 #gridDespesas{
-    display: grid;
+    
     margin-top:100px;
-    width: 945px;
+    width: 800px;
     height: 350px;
-    grid-template-columns: repeat(10,90px);
-    grid-template-rows: repeat(10,25px);
-    background-color: aqua;
-    column-gap: 5px;
+    background-color: rgb(235, 235, 235);
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#gridDespesas table{
+    width: 800px;
+}
+#gridDespesas table th{
+    padding-left: 10px;
+    background-color: gray;
     
 }
 
-.linhas{
-    background-color: red;
-
+#gridDespesas table td{
+    padding-left: 10px;
+    /* border-bottom: 1px solid gray; */
+    border-bottom: 1px solid gray
 }
