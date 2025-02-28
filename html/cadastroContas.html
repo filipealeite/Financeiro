@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/styleCadastroContas.css">
         <script src="../script/script.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
         <title>CADASTRO DE CONTAS</title>
     </head>
     <body onload="getItens();">
@@ -28,9 +29,10 @@
             </div>
             
             <div id="optionsNav">
-                <a href="" class="elementGrid">Link 1</a>
-                <a href="" class="elementGrid">Link 2</a>
-                <a href="" class="elementGrid">Link 3</a>
+                <a href="" class="elementGrid">Contas</a>
+                <a href="" class="elementGrid">Despesas</a>
+                <a href="" class="elementGrid">Receitas</a>
+                <a href="" class="elementGrid">Investimentos</a>
             </div>
         </nav>
         <section id="content">
@@ -41,14 +43,14 @@
                 <div class="modal-content">
                     <form action="javascript: postContas()" id="formConta">
                         <label>Nome:</label>
-                        <input type="text" name="txtNome" id="txtNome">
+                        <input type="text" name="txtNome" id="txtNome" placeholder="a">
                         <label>Tipo:</label>
-                        <select name="" id="">
+                        <select name="" id="" title="teste">
                             <option value="teste2">teste2</option>
                             <option value="teste3">teste3</option>
                         </select>
                         <label>Valor conta:</label>
-                        <input type="text" name="txtValorConta" id="txtValorConta">
+                        <input type="text" name="txtValorConta" id="txtValorConta" placeholder="a">
                         <input type="submit" value="teste">
                     </form>
                 </div>
